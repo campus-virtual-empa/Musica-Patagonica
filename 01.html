@@ -1,89 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letra - Kelluen may Tayül</title>
-  <style>
-    /* Estilos globales y color de fondo */
-    body {
-      background-color: #fffce7;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222222;
-      margin: 0;
-      padding: 20px 15px 15px 15px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-
-    /* Tarjeta o contenedor justo para el texto */
-    .tarjeta-letra {
-      position: relative;
-      background-color: #fffce7;
-      border: 1px solid #e0dac3;
-      border-radius: 8px;
-      padding: 20px 25px 15px 20px;
-      max-width: 380px;
-      width: 100%;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Botón de cierre (Cruz en el vértice superior derecho) */
-    .btn-cerrar {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      background: none;
-      border: none;
-      font-size: 18px;
-      font-weight: bold;
-      color: #888888;
-      cursor: pointer;
-      line-height: 1;
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
-
-    .btn-cerrar:hover {
-      color: #000000;
-      background-color: #f0ebd6;
-    }
-
-    /* Título de la canción */
-    h2 {
-      margin: 0 0 12px 0;
-      font-size: 1.1rem;
-      color: #007bc7;
-      padding-right: 20px;
-    }
-
-    /* Estilo del texto de la canción */
-    .texto-cancion {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      white-space: pre-line; /* Mantiene los saltos de línea del texto */
-      margin: 0;
-      color: #333333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Kelluen may Tayül</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px; /* Mantiene la lectura centrada y cómoda */
+            margin: 40px auto;
+            padding: 20px;
+            color: #333333;
+            background-color: #ffffff;
+        }
+        .reproductores {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #cccccc;
+        }
+        audio {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .letra {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            white-space: pre-wrap; /* Respeta los saltos de línea de la poesía */
+        }
+    </style>
 </head>
 <body>
 
-  <div class="tarjeta-letra">
-    <!-- Botón con la cruz para cerrar la ventana -->
-    <button class="btn-cerrar" onclick="window.close();" title="Cerrar ventana">&times;</button>
-    
-    <h2>Kelluen may Tayül</h2>
-    
-    <p class="texto-cancion">We we we we an, We we we we.
+    <h1 style="margin-bottom: 5px;">Kelluen may Tayül</h1>
+    <h3 style="margin-top: 0; color: #666666; font-weight: normal;">Canto de Agradecimiento</h3>
+
+    <!-- CAJA DE REPRODUCTORES DE AUDIO -->
+    <div class="reproductores">
+        <strong>🎵 Escuchar el Canto:</strong>
+        <audio controls preload="metadata">
+            <source src="https://github.com/campus-virtual-empa/Musica-Patagonica/raw/refs/heads/main/AP_01_tema.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <strong>🗣️ Escuchar Texto Hablado:</strong>
+        <audio controls preload="metadata" style="margin-bottom: 0;">
+            <source src="https://github.com/campus-virtual-empa/Musica-Patagonica/raw/refs/heads/main/AP_01_Texto.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <!-- LETRA DE LA CANCIÓN -->
+    <div class="letra">
+We we we we an, We we we we.
 We we we we an, Kelluen, kelluen, kelluen…
-Wa wa wa wa wa, wa 
+Wa wa wa wa wa, wa
 wa wa wa wa... Kelluen, kelluen, kelluen
-kelluen may!</p>
-  </div>
+kelluen may!
+    </div>
 
 </body>
 </html>
