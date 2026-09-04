@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letra - Trompetüyün</title>
+  <style>
+    /* Estilos globales y color de fondo */
+    body {
+      background-color: #fffce7;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222222;
+      margin: 0;
+      padding: 20px 15px 15px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Tarjeta o contenedor justo para el texto */
+    .tarjeta-letra {
+      position: relative;
+      background-color: #fffce7;
+      border: 1px solid #e0dac3;
+      border-radius: 8px;
+      padding: 20px 25px 15px 20px;
+      max-width: 380px;
+      width: 100%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Botón de cierre (Cruz en el vértice superior derecho) */
+    .btn-cerrar {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: #888888;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .btn-cerrar:hover {
+      color: #000000;
+      background-color: #f0ebd6;
+    }
+
+    /* Título de la canción */
+    h2 {
+      margin: 0 0 12px 0;
+      font-size: 1.1rem;
+      color: #007bc7;
+      padding-right: 20px;
+    }
+
+    /* Estilo del texto de la canción */
+    .texto-cancion {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      white-space: pre-line; /* Mantiene los saltos de línea del texto */
+      margin: 0;
+      color: #333333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tarjeta-letra">
+    <!-- Botón con la cruz para cerrar la ventana -->
+    <button class="btn-cerrar" onclick="window.close();" title="Cerrar ventana">&times;</button>
+    
+    <h2>Trompetüyün</h2>
+    
+    <p class="texto-cancion">Aunque el trompe es un instrumento de origen euroasiático introducido durante la época de la conquista y colonización, fue profundamente asimilado por el pueblo mapuche. Reemplazó en gran medida al künkülkawe (un arco musical tradicional de boca de una sola cuerda) debido a su durabilidad y mayor volumen sonoro, manteniendo la misma técnica de resonancia bucal.</p>
+  </div>
+
+</body>
+</html>
