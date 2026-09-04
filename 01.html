@@ -7,45 +7,107 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 600px; /* Mantiene la lectura centrada y cómoda */
-            margin: 40px auto;
-            padding: 20px;
+            max-width: 580px;
+            margin: 5px auto; /* Mínima distancia respecto al borde superior de la pantalla */
+            padding: 12px 18px;
             color: #333333;
-            background-color: #ffffff;
+            background-color: #fffce7; /* Fondo solicitado */
+            position: relative;
         }
+
+        /* Botón de cierre superior derecho */
+        .btn-cerrar {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 26px;
+            font-weight: bold;
+            color: #666666;
+            cursor: pointer;
+            line-height: 1;
+            padding: 5px;
+        }
+
+        .btn-cerrar:hover {
+            color: #000000;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 2px;
+            font-size: 1.5rem;
+            padding-right: 30px; /* Evita que el título tape la cruz de cierre */
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #666666;
+            font-weight: normal;
+            font-size: 0.95rem;
+        }
+
         .reproductores {
-            background-color: #f2f2f2;
-            padding: 20px;
+            background-color: #f4f0d9; /* Tono integrado con el fondo suave */
+            padding: 10px 14px;
             border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid #cccccc;
+            margin-bottom: 12px;
+            border: 1px solid #e2ddc4;
         }
+
+        .reproductores strong {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+        }
+
         audio {
             width: 100%;
-            margin-bottom: 15px;
+            height: 36px; /* Altura compacta para ahorrar espacio vertical */
+            margin-bottom: 6px;
         }
+
+        audio:last-of-type {
+            margin-bottom: 0;
+        }
+
         .letra {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            white-space: pre-wrap; /* Respeta los saltos de línea de la poesía */
+            font-size: 0.95rem;
+            line-height: 1.4; /* Espaciado entre líneas optimizado para PC */
+            white-space: pre-wrap;
+            margin-bottom: 12px;
+        }
+
+        .imagen-pie {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin-top: 8px;
         }
     </style>
 </head>
 <body>
 
-    <h1 style="margin-bottom: 5px;">Kelluen may Tayül</h1>
-    <h3 style="margin-top: 0; color: #666666; font-weight: normal;">Canto de Agradecimiento</h3>
+    <!-- BOTÓN DE CIERRE -->
+    <button class="btn-cerrar" onclick="window.close()" title="Cerrar pestaña">&times;</button>
+
+    <!-- CABECERA -->
+    <h1>Kelluen may Tayül</h1>
+    <h3>Canto de Agradecimiento</h3>
 
     <!-- CAJA DE REPRODUCTORES DE AUDIO -->
     <div class="reproductores">
-        <strong>🎵 Escuchar el Canto:</strong>
+        <strong>Canto:</strong>
         <audio controls preload="metadata">
             <source src="https://github.com/campus-virtual-empa/Musica-Patagonica/raw/refs/heads/main/AP_01_tema.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
 
-        <strong>🗣️ Escuchar Texto Hablado:</strong>
-        <audio controls preload="metadata" style="margin-bottom: 0;">
+        <strong>Narración:</strong>
+        <audio controls preload="metadata">
             <source src="https://github.com/campus-virtual-empa/Musica-Patagonica/raw/refs/heads/main/AP_01_Texto.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
@@ -59,6 +121,9 @@ Wa wa wa wa wa, wa
 wa wa wa wa... Kelluen, kelluen, kelluen
 kelluen may!
     </div>
+
+    <!-- IMAGEN AL PIE -->
+    <img src="Aime.jpg" alt="Aimé Painé" class="imagen-pie">
 
 </body>
 </html>
