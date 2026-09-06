@@ -1,92 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letra - Ngürü tayül</title>
-  <style>
-    /* Estilos globales y color de fondo */
-    body {
-      background-color: #fffce7;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222222;
-      margin: 0;
-      padding: 20px 15px 15px 15px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Ngürü Tayül</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 580px;
+            margin: 5px auto;
+            padding: 12px 18px;
+            color: #333333;
+            background-color: #fffce7;
+            position: relative;
+        }
 
-    /* Tarjeta o contenedor justo para el texto */
-    .tarjeta-letra {
-      position: relative;
-      background-color: #fffce7;
-      border: 1px solid #e0dac3;
-      border-radius: 8px;
-      padding: 20px 25px 15px 20px;
-      max-width: 380px;
-      width: 100%;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    }
+        /* Botón de cierre superior derecho */
+        .btn-cerrar {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 26px;
+            font-weight: bold;
+            color: #666666;
+            cursor: pointer;
+            line-height: 1;
+            padding: 5px;
+        }
 
-    /* Botón de cierre (Cruz en el vértice superior derecho) */
-    .btn-cerrar {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      background: none;
-      border: none;
-      font-size: 18px;
-      font-weight: bold;
-      color: #888888;
-      cursor: pointer;
-      line-height: 1;
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
+        .btn-cerrar:hover {
+            color: #000000;
+        }
 
-    .btn-cerrar:hover {
-      color: #000000;
-      background-color: #f0ebd6;
-    }
+        h1 {
+            margin-top: 0;
+            margin-bottom: 2px;
+            font-size: 1.5rem;
+            padding-right: 30px;
+        }
 
-    /* Título de la canción */
-    h2 {
-      margin: 0 0 12px 0;
-      font-size: 1.1rem;
-      color: #007bc7;
-      padding-right: 20px;
-    }
+        h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #666666;
+            font-weight: normal;
+            font-size: 0.95rem;
+        }
 
-    /* Estilo del texto de la canción */
-    .texto-cancion {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      white-space: pre-line; /* Mantiene los saltos de línea del texto */
-      margin: 0;
-      color: #333333;
-    }
-  </style>
+        .reproductores {
+            background-color: #f4f0d9;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #e2ddc4;
+        }
+
+        .reproductores strong {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+        }
+
+        audio {
+            width: 100%;
+            height: 36px;
+            margin-bottom: 6px;
+        }
+
+        audio:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .letra {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            margin-bottom: 12px;
+        }
+
+        /* Título de la obra de arte sobre la imagen */
+        .titulo-obra {
+            text-align: center;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #333333;
+            margin-top: 16px;
+            margin-bottom: 4px;
+        }
+
+        .titulo-obra a {
+            color: #000000;
+            text-decoration: underline; /* Subrayado visible en negro */
+        }
+
+        /* Ajuste para centrar la imagen sin estirarla ni pixelarla */
+        .imagen-pie {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 4px auto;
+        }
+
+        /* Crédito de la imagen con enlace en letras negras y subrayado permanente */
+        .credito-imagen {
+            text-align: center;
+            margin-top: 2px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+        }
+
+        .credito-imagen a {
+            color: #000000;
+            text-decoration: underline; /* Subrayado visible */
+        }
+    </style>
 </head>
 <body>
 
-  <div class="tarjeta-letra">
-    <!-- Botón con la cruz para cerrar la ventana -->
-    <button class="btn-cerrar" onclick="window.close();" title="Cerrar ventana">&times;</button>
-    
-    <h2>Ngürü tayül</h2>
-    
-    <p class="texto-cancion">Mama yew, mama yew, Mama yew, mama yew
+    <!-- BOTÓN DE CIERRE -->
+    <button class="btn-cerrar" onclick="window.close()" title="Cerrar pestaña">&times;</button>
+
+    <!-- CABECERA -->
+    <h1>Ngürü Tayül</h1>
+    <h3>Canto Sagrado del Zorro</h3>
+
+    <!-- CAJA DE REPRODUCTORES DE AUDIO -->
+    <div class="reproductores">
+        <strong>Canto:</strong>
+        <audio controls preload="metadata">
+            <source src="https://github.com/campus-virtual-empa/Musica-Patagonica/raw/refs/heads/main/AP_05_tema.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <strong>Narración:</strong>
+        <audio controls preload="metadata">
+            <source src="https://github.com/campus-virtual-empa/Musica-Patagonica/raw/refs/heads/main/AP_05_Texto.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <!-- LETRA DE LA CANCIÓN -->
+    <div class="letra">
+Mama yew, mama yew, Mama yew, mama yew
 Mama yew, mama yew
- Kiñe ngetan mew, wenu künumey 
-Llankapu wentru, kiñe ngetan mew. 
+Kiñe ngetan mew, wenu künumey
+Llankapu wentru, kiñe ngetan mew.
 Wenu künumey, llankapu wentru.
 We we we we, we we yew!
 We we we we, we we yew!
-</p>
-  </div>
+    </div>
+
+    <!-- NOMBRE DE LA OBRA -->
+    <div class="titulo-obra">"<a href="https://www.tesauroregional.cl/terminos/3426" target="_blank" rel="noopener noreferrer">kitra mapuche zorro zoomorfa piedra</a>"</div>
+
+    <!-- IMAGEN AL PIE -->
+    <img src="Kitra_Zorro.jpg" alt="SURDOC" class="imagen-pie">
+
+    <!-- ENLACE AL PIE DE LA IMAGEN -->
+    <div class="credito-imagen">
+        <a href="https://www.surdoc.cl/registro/3-1206/" target="_blank" rel="noopener noreferrer">SURDOC</a>
+    </div>
 
 </body>
 </html>
