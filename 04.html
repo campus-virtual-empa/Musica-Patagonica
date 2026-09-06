@@ -1,91 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letra - Luan Tayül</title>
-  <style>
-    /* Estilos globales y color de fondo */
-    body {
-      background-color: #fffce7;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222222;
-      margin: 0;
-      padding: 20px 15px 15px 15px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Luan Tayül</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 580px;
+            margin: 5px auto;
+            padding: 12px 18px;
+            color: #333333;
+            background-color: #fffce7;
+            position: relative;
+        }
 
-    /* Tarjeta o contenedor justo para el texto */
-    .tarjeta-letra {
-      position: relative;
-      background-color: #fffce7;
-      border: 1px solid #e0dac3;
-      border-radius: 8px;
-      padding: 20px 25px 15px 20px;
-      max-width: 380px;
-      width: 100%;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    }
+        /* Botón de cierre superior derecho */
+        .btn-cerrar {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 26px;
+            font-weight: bold;
+            color: #666666;
+            cursor: pointer;
+            line-height: 1;
+            padding: 5px;
+        }
 
-    /* Botón de cierre (Cruz en el vértice superior derecho) */
-    .btn-cerrar {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      background: none;
-      border: none;
-      font-size: 18px;
-      font-weight: bold;
-      color: #888888;
-      cursor: pointer;
-      line-height: 1;
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
+        .btn-cerrar:hover {
+            color: #000000;
+        }
 
-    .btn-cerrar:hover {
-      color: #000000;
-      background-color: #f0ebd6;
-    }
+        h1 {
+            margin-top: 0;
+            margin-bottom: 2px;
+            font-size: 1.5rem;
+            padding-right: 30px;
+        }
 
-    /* Título de la canción */
-    h2 {
-      margin: 0 0 12px 0;
-      font-size: 1.1rem;
-      color: #007bc7;
-      padding-right: 20px;
-    }
+        h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #666666;
+            font-weight: normal;
+            font-size: 0.95rem;
+        }
 
-    /* Estilo del texto de la canción */
-    .texto-cancion {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      white-space: pre-line; /* Mantiene los saltos de línea del texto */
-      margin: 0;
-      color: #333333;
-    }
-  </style>
+        .reproductores {
+            background-color: #f4f0d9;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #e2ddc4;
+        }
+
+        .reproductores strong {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+        }
+
+        audio {
+            width: 100%;
+            height: 36px;
+            margin-bottom: 6px;
+        }
+
+        audio:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .letra {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            margin-bottom: 14px;
+        }
+
+        /* Contenedor del hipervínculo superior */
+        .enlace-imagen {
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        .enlace-imagen a {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        /* Imagen de guanaco */
+        .imagen-pie {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="tarjeta-letra">
-    <!-- Botón con la cruz para cerrar la ventana -->
-    <button class="btn-cerrar" onclick="window.close();" title="Cerrar ventana">&times;</button>
-    
-    <h2>Luan Tayül</h2>
-    
-    <p class="texto-cancion">Tra, tra, tra, pinga, Tra, tra, tra, pinga,
-Trayle, trayle, trayle, Mayen, mayen, mayen, mayen, mayen, 
+    <!-- BOTÓN DE CIERRE -->
+    <button class="btn-cerrar" onclick="window.close()" title="Cerrar pestaña">&times;</button>
+
+    <!-- CABECERA -->
+    <h1>Luan Tayül</h1>
+    <h3>Canto Sagrado del guanaco</h3>
+
+    <!-- CAJA DE REPRODUCTORES DE AUDIO -->
+    <div class="reproductores">
+        <strong>Canto:</strong>
+        <audio controls preload="metadata">
+            <source src="https://github.com/campus-virtual-empa/Musica-Patagonica/raw/refs/heads/main/AP_04_tema.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <strong>Narración:</strong>
+        <audio controls preload="metadata">
+            <source src="https://github.com/campus-virtual-empa/Musica-Patagonica/raw/refs/heads/main/AP_04_Texto.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <!-- LETRA DE LA CANCIÓN -->
+    <div class="letra">
+Tra, tra, tra, pinga, Tra, tra, tra, pinga,
+Trayle, trayle, trayle, Mayen, mayen, mayen, mayen, mayen,
 Allangellay, allangellay ngeni,
-Treka, treka tupeyu kolo kolonto mapu mew, 
-Kasu age yem kayga, kasu age yem kayga, 
+Treka, treka tupeyu kolo kolonto mapu mew,
+Kasu age yem kayga, kasu age yem kayga,
 Terapey, terapey, terapey.
-</p>
-  </div>
+    </div>
+
+    <!-- ENLACE Y SU IMAGEN ASOCIADA -->
+    <div class="enlace-imagen">
+        <a href="https://whc.unesco.org/en/list/936/gallery/" target="_blank" rel="noopener noreferrer">Imagen de guanaco, Cueva de las manos</a>
+    </div>
+    <img src="Guanaco_CdlManos.jpg" alt="Imagen de guanaco, Cueva de las manos" class="imagen-pie">
 
 </body>
 </html>
